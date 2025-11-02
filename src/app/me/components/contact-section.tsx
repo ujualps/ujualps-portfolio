@@ -23,7 +23,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <Card className="border-neutral-200 gap-2">
             <CardHeader>
-              <div className="flex items-center gap-3 mb-0">
+              <div className="flex flex-col items-start gap-3 mb-0">
                 <div className="p-2 bg-neutral-100 rounded-lg">
                   <Briefcase className="size-5 text-neutral-700" />
                 </div>
@@ -41,7 +41,7 @@ export function ContactSection() {
 
           <Card className="border-neutral-200 gap-2">
             <CardHeader>
-              <div className="flex items-center gap-3 mb-0">
+              <div className="flex flex-col items-start gap-3 mb-0">
                 <div className="p-2 bg-neutral-100 rounded-lg">
                   <Camera className="size-5 text-neutral-700" />
                 </div>

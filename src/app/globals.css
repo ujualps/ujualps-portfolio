@@ -131,7 +131,13 @@
 }
 
 .animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
+  animation: scroll-horizontal 100s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .animate-scroll-horizontal {
+    animation: scroll-horizontal 200s linear infinite;
+  }
 }
 
 @keyframes fadeInUp {
@@ -143,4 +149,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
