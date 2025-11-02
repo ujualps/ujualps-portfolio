@@ -58,7 +58,10 @@ export default function Home() {
               size="lg"
               className="border-neutral-300 hover:bg-neutral-100"
             >
-              <a href="/resume.pdf" download>
+              <a
+                href="https://drive.google.com/file/d/1P8DHGjEQiT0JzVJ0C33GiLZDnnXqPpwG/view?usp=sharing"
+                download
+              >
                 <Download className="size-5" />
                 Download Resume
               </a>
