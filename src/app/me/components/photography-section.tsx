@@ -8,7 +8,7 @@ export function PhotographySection() {
   const duplicatedImages = [...TALES_OF_UJ_IMAGES, ...TALES_OF_UJ_IMAGES];
 
   return (
-    <section className="px-6 py-20 bg-white">
+    <section id="photography" className="px-6 py-20 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-semibold mb-4 text-center">
           My Photography

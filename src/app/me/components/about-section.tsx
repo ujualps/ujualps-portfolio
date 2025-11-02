@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section className="px-6 py-20 max-w-4xl mx-auto">
+    <section id="about" className="px-6 py-20 max-w-4xl mx-auto">
       <h2 className="text-4xl font-semibold mb-6 text-center">About Me</h2>
       <p className="text-neutral-600 leading-relaxed text-lg text-center">
         Every frame I capture reflects my patience, precision, and passion for

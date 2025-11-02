@@ -5,14 +5,15 @@ import Link from 'next/link';
 
 export function ContactSection() {
   return (
-    <section className="px-6 py-20 bg-neutral-50">
+    <section id="contact" className="px-6 py-20 bg-neutral-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold mb-4">Get in Touch</h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-6">
             Whether you&apos;re looking for a software engineer to bring your
             ideas to life, a photographer to capture your special moments, or
-            someone who can do both — I&apos;d love to hear from you.
+            someone who can do both — Tales of UJ is here to help bring your
+            vision to life.
           </p>
           <p className="text-neutral-500 mb-8">
             Let&apos;s connect and create something beautiful together.
