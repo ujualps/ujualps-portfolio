@@ -13,28 +13,48 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ujual P S | Photographer & Frontend Engineer</title>
+        <title>Tales of UJ | Theyyam & Portrait Photography by Ujual P S</title>
+
         <meta
           name="description"
-          content="Portfolio of Ujual P S — a frontend engineer and photographer combining code and creativity."
+          content="Tales of UJ is the photography portfolio of Ujual P S — capturing the divine energy of Theyyam and the subtle emotions of portrait photography through powerful visual storytelling."
         />
+
         <meta
           name="keywords"
-          content="Ujual P S, Photographer, Frontend Engineer, Next.js, React"
+          content="Tales of UJ, Ujual P S, Theyyam photography, Kerala Theyyam, portrait photography, cultural photography, Indian photographer, documentary photography, Kerala photography portfolio"
         />
+
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Ujual P S" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Ujual P S | Photographer & Frontend Engineer"
+          content="Tales of UJ | Theyyam & Portrait Photography by Ujual P S"
         />
         <meta
           property="og:description"
-          content="Explore my photography and web development projects — crafted with precision and creativity."
+          content="Explore Tales of UJ — the visual world of Ujual P S, blending art, tradition, and storytelling through Theyyam and portrait photography."
         />
         <meta property="og:image" content="/preview.jpg" />
-        <meta property="og:url" content="https://yourapp.vercel.app/" />
+        <meta property="og:url" content="https://www.talesofuj.com/home" />
+        <meta property="og:site_name" content="Tales of UJ" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Tales of UJ | Photography by Ujual P S"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover Tales of UJ — Theyyam and portrait photography by Ujual P S, celebrating Kerala’s cultural spirit through the lens."
+        />
+        <meta name="twitter:image" content="/preview.jpg" />
       </Head>
+
       <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
         <HeroSection />
 

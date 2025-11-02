@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://talesofuj.vercel.app/
+Host: https://www.talesofuj.com
 
 # Sitemaps
-Sitemap: https://talesofuj.vercel.app/sitemap.xml
+Sitemap: https://www.talesofuj.com/sitemap.xml
