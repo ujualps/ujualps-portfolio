@@ -5,6 +5,9 @@ import { AboutSection } from '@/app/me/components/about-section';
 import { ContactSection } from '@/app/me/components/contact-section';
 import { Footer } from '@/app/me/components/footer';
 import Head from 'next/head';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ChevronLeft } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -53,6 +56,20 @@ export default function Home() {
       </Head>
 
       <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
+        <div className="container mx-auto px-6 pt-8">
+          <Button
+            asChild
+            variant="ghost"
+            size="lg"
+            className="transition-all duration-300 text-lg"
+          >
+            <Link href="/home">
+              <ChevronLeft className="mr-2 size-6" />
+              Home
+            </Link>
+          </Button>
+        </div>
+
         <HeroSection />
 
         <Separator className="bg-neutral-200" />
