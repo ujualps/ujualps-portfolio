@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://talesofuj.vercel.app//sitemap.xml

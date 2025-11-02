@@ -31,10 +31,10 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="border-neutral-200 hover:shadow-lg transition-shadow gap-4"
+              className="border-neutral-200 hover:shadow-lg transition-shadow gap-0"
             >
               <CardHeader>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col items-start gap-4">
                   <div className="p-3 bg-neutral-100 rounded-lg w-fit">
                     <service.Icon className="size-6 text-neutral-700" />
                   </div>
