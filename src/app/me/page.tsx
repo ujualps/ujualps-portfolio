@@ -1,6 +1,6 @@
 import { Separator } from '@/components/ui/separator';
 import { HeroSection } from '@/app/me/components/hero-section';
-import { PhotographySection } from '@/app/home/components/photography-section';
+import { PhotographySection } from '@/app/components/photography-section';
 import { AboutSection } from '@/app/me/components/about-section';
 import { ContactSection } from '@/app/me/components/contact-section';
 import { Footer } from '@/app/me/components/footer';
