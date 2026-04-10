@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import { Separator } from '@/components/ui/separator';
 import { HeroSection } from '@/app/components/hero-section';
 import { PhotographySection } from '@/app/components/photography-section';
 import { FeaturedSection } from '@/app/components/featured-section';
@@ -50,34 +49,18 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Discover Tales of UJ — Theyyam and portrait photography by Ujual P S, celebrating Kerala’s cultural spirit through the lens."
+          content="Discover Tales of UJ — Theyyam and portrait photography by Ujual P S, celebrating Kerala's cultural spirit through the lens."
         />
         <meta name="twitter:image" content="/preview.jpg" />
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
+      <main className="min-h-screen bg-[#0c0905] text-amber-50">
         <HeroSection />
-
-        <Separator className="bg-neutral-200" />
-
         <PhotographySection />
-
-        <Separator className="bg-neutral-200" />
-
         <ServicesSection />
-
-        <Separator className="bg-neutral-200" />
-
         <FeaturedSection />
-
-        <Separator className="bg-neutral-200" />
-
         <AboutSection />
-
-        <Separator className="bg-neutral-200" />
-
         <CTASection />
-
         <Footer />
       </main>
     </>

@@ -1,54 +1,93 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Camera, Heart } from 'lucide-react';
+'use client';
+
+import { motion, type Variants } from 'framer-motion';
+
+const services = [
+  {
+    title: 'Portrait Photography',
+    description:
+      'Capturing authentic expressions and personalities in intimate portrait sessions. Every sitting becomes a conversation — a quiet exchange between subject and lens.',
+  },
+  {
+    title: 'Emotional Storytelling',
+    description:
+      'Photography that seeks the narratives etched in faces and lived experiences. Moments documented not as records, but as visual literature.',
+  },
+];
+
+const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
+
+const containerVariants: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.18 } },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: EASE },
+  },
+};
 
 export function ServicesSection() {
-  const services = [
-    {
-      Icon: Camera,
-      title: 'Portrait Photography',
-      description:
-        'Capturing authentic expressions and personalities in intimate portrait sessions.',
-    },
-    {
-      Icon: Heart,
-      title: 'Emotional Storytelling',
-      description:
-        'Photography that seeks the narratives etched in faces and experiences.',
-    },
-  ];
-
   return (
-    <section className="px-6 py-20 bg-neutral-50">
+    <section className="px-6 md:px-12 py-24 bg-[#0f0c08]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold mb-4">Photography Services</h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Specialized photography services tailored to capture your unique
-            story
+        {/* Section opener */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.9, ease: EASE }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-4 mb-10">
+            <span className="text-[9px] uppercase tracking-[0.38em] text-orange-400/60">
+              § 02
+            </span>
+            <div className="flex-1 h-px bg-amber-100/8" />
+            <span className="text-[9px] uppercase tracking-[0.38em] text-orange-400/40">
+              Disciplines
+            </span>
+          </div>
+
+          <h2 className="font-serif font-light text-[clamp(2.8rem,7vw,5.5rem)] text-amber-50 leading-none tracking-tight mb-4">
+            The Craft
+          </h2>
+          <p className="font-serif italic text-stone-400 text-xl">
+            Specialized disciplines tailored to your story.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className="border-neutral-200 hover:shadow-lg transition-shadow gap-0"
+        </motion.div>
+
+        {/* Two services as editorial columns */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+        >
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              variants={itemVariants}
+              className={`py-10 ${i === 0 ? 'md:pr-14 md:border-r md:border-amber-100/8' : 'md:pl-14'} ${i < services.length - 1 ? 'border-b border-amber-100/8 md:border-b-0' : ''}`}
             >
-              <CardHeader>
-                <div className="flex flex-col items-start gap-4">
-                  <div className="p-3 bg-neutral-100 rounded-lg w-fit">
-                    <service.Icon className="size-6 text-neutral-700" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-neutral-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+              <span className="text-[9px] uppercase tracking-[0.4em] text-orange-400/40 mb-5 block font-mono">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 className="font-serif font-light text-3xl md:text-4xl text-amber-100 leading-tight mb-5">
+                {service.title}
+              </h3>
+              <div className="h-px w-8 bg-orange-800/40 mb-5" />
+              <p className="text-stone-400 leading-relaxed text-sm font-light">
+                {service.description}
+              </p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
