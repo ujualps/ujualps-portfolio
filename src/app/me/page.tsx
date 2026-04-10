@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'Ujual P S',
     'Tales of UJ',
+    'talesofuj',
     'portfolio',
     'photographer',
     'frontend engineer',
@@ -60,6 +61,7 @@ const jsonLd = {
     '@type': 'Person',
     '@id': 'https://www.talesofuj.com/#person',
     name: 'Ujual P S',
+    alternateName: 'talesofuj',
     url: 'https://www.talesofuj.com',
     email: 'talesofuj@gmail.com',
     jobTitle: 'Photographer & Frontend Engineer',

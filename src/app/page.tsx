@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Tales of UJ is the photography portfolio of Ujual P S — capturing the divine energy of Theyyam and the subtle emotions of portrait photography through powerful visual storytelling.',
   keywords: [
     'Tales of UJ',
+    'talesofuj',
     'Ujual P S',
     'Theyyam photography',
     'Kerala Theyyam',
@@ -57,6 +58,7 @@ const jsonLd = {
       '@id': 'https://www.talesofuj.com/#website',
       url: 'https://www.talesofuj.com',
       name: 'Tales of UJ',
+      alternateName: 'talesofuj',
       description:
         'Theyyam & portrait photography by Ujual P S — storytelling through the lens.',
       author: { '@id': 'https://www.talesofuj.com/#person' },
@@ -65,6 +67,7 @@ const jsonLd = {
       '@type': 'Person',
       '@id': 'https://www.talesofuj.com/#person',
       name: 'Ujual P S',
+      alternateName: 'talesofuj',
       url: 'https://www.talesofuj.com',
       email: 'talesofuj@gmail.com',
       jobTitle: 'Photographer & Frontend Engineer',
