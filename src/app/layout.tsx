@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
-import Head from 'next/head';
 import { SmoothScrollProvider } from '@/components/smooth-scroll-provider';
 import { Cursor } from '@/components/cursor';
 
@@ -23,8 +22,23 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Tales of UJ',
-  description: 'Software Engineer & Photographer',
+  metadataBase: new URL('https://www.talesofuj.com'),
+  title: {
+    default: 'Tales of UJ',
+    template: '%s | Tales of UJ',
+  },
+  description:
+    'Theyyam & portrait photography by Ujual P S — storytelling through the lens.',
+  authors: [{ name: 'Ujual P S', url: 'https://www.talesofuj.com' }],
+  creator: 'Ujual P S',
+  verification: {
+    google: '_HEE9JT44IOtnMICpSLqM2_1D6Yau122JOq_0bHWf4U',
+  },
+  openGraph: {
+    siteName: 'Tales of UJ',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -34,13 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="_HEE9JT44IOtnMICpSLqM2_1D6Yau122JOq_0bHWf4U"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} antialiased`}
       >

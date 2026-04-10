@@ -1,60 +1,88 @@
+import type { Metadata } from 'next';
 import { Separator } from '@/components/ui/separator';
 import { HeroSection } from '@/app/me/components/hero-section';
 import { PhotographySection } from '@/app/components/photography-section';
 import { AboutSection } from '@/app/me/components/about-section';
 import { ContactSection } from '@/app/me/components/contact-section';
 import { Footer } from '@/app/me/components/footer';
-import Head from 'next/head';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Portfolio | Photographer & Frontend Engineer',
+  description:
+    'View the portfolio of Ujual P S — creator of Tales of UJ. Explore photography projects featuring Theyyam, portraits, and visual stories, alongside interactive web experiences built with React and Next.js.',
+  keywords: [
+    'Ujual P S',
+    'Tales of UJ',
+    'portfolio',
+    'photographer',
+    'frontend engineer',
+    'Kerala photographer',
+    'Theyyam photography',
+    'portrait photography',
+    'Next.js developer',
+    'React developer',
+    'hire photographer Kerala',
+    'freelance web developer',
+  ],
+  alternates: {
+    canonical: 'https://www.talesofuj.com/me',
+  },
+  openGraph: {
+    title: 'Ujual P S | Portfolio | Photographer & Frontend Engineer',
+    description:
+      'Explore the creative portfolio of Ujual P S — blending storytelling through Tales of UJ photography and modern frontend engineering. Reach out for photography projects or web collaborations.',
+    url: 'https://www.talesofuj.com/me',
+    images: [
+      {
+        url: '/portfolio-preview.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Portfolio of Ujual P S — photographer and frontend engineer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ujual P S | Photographer & Frontend Engineer',
+    description:
+      'Discover photography and web development projects by Ujual P S — creator of Tales of UJ. Available for freelance and collaboration work.',
+    images: ['/portfolio-preview.jpg'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://www.talesofuj.com/#person',
+    name: 'Ujual P S',
+    url: 'https://www.talesofuj.com',
+    jobTitle: 'Photographer & Frontend Engineer',
+    description:
+      'Photographer specialising in Theyyam and portrait photography, and frontend engineer available for freelance work in photography and web development.',
+    knowsAbout: [
+      'Theyyam photography',
+      'Portrait photography',
+      'Documentary photography',
+      'Kerala culture',
+      'Frontend Engineering',
+      'React',
+      'Next.js',
+    ],
+  },
+};
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Ujual P S | Portfolio | Photographer & Frontend Engineer</title>
-
-        <meta
-          name="description"
-          content="View the portfolio of Ujual P S — creator of Tales of UJ. Explore photography projects featuring Theyyam, portraits, and visual stories, alongside interactive web experiences built with React and Next.js. Get in touch for collaborations or freelance work in photography or web development."
-        />
-
-        <meta
-          name="keywords"
-          content="Ujual P S, Tales of UJ, portfolio, photographer, frontend engineer, Kerala photographer, Theyyam photography, portrait photography, Next.js developer, React developer, hire photographer Kerala, freelance web developer"
-        />
-
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Ujual P S" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Ujual P S | Portfolio | Photographer & Frontend Engineer"
-        />
-        <meta
-          property="og:description"
-          content="Explore the creative portfolio of Ujual P S — blending storytelling through Tales of UJ photography and modern frontend engineering. Reach out for photography projects or web collaborations."
-        />
-        <meta property="og:image" content="/portfolio-preview.jpg" />
-        <meta property="og:url" content="https://www.talesofuj.com/me" />
-        <meta property="og:site_name" content="Tales of UJ" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Ujual P S | Photographer & Frontend Engineer"
-        />
-        <meta
-          name="twitter:description"
-          content="Discover photography and web development projects by Ujual P S — creator of Tales of UJ. Available for freelance and collaboration work."
-        />
-        <meta name="twitter:image" content="/portfolio-preview.jpg" />
-      </Head>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-white text-neutral-900">
         <div className="container mx-auto px-6 pt-8">
           <Button
