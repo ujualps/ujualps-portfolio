@@ -66,9 +66,14 @@ const jsonLd = {
       '@id': 'https://www.talesofuj.com/#person',
       name: 'Ujual P S',
       url: 'https://www.talesofuj.com',
+      email: 'talesofuj@gmail.com',
       jobTitle: 'Photographer & Frontend Engineer',
       description:
         'Photographer specialising in Theyyam and portrait photography, and frontend engineer based in Kerala, India.',
+      sameAs: [
+        'https://www.instagram.com/talesofuj',
+        'https://www.linkedin.com/in/ujualps',
+      ],
       knowsAbout: [
         'Theyyam photography',
         'Portrait photography',
@@ -78,6 +83,12 @@ const jsonLd = {
         'React',
         'Next.js',
       ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'talesofuj@gmail.com',
+        contactType: 'customer service',
+        availableLanguage: ['English'],
+      },
     },
   ],
 };

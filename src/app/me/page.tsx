@@ -61,9 +61,14 @@ const jsonLd = {
     '@id': 'https://www.talesofuj.com/#person',
     name: 'Ujual P S',
     url: 'https://www.talesofuj.com',
+    email: 'talesofuj@gmail.com',
     jobTitle: 'Photographer & Frontend Engineer',
     description:
       'Photographer specialising in Theyyam and portrait photography, and frontend engineer available for freelance work in photography and web development.',
+    sameAs: [
+      'https://www.instagram.com/talesofuj',
+      'https://www.linkedin.com/in/ujualps',
+    ],
     knowsAbout: [
       'Theyyam photography',
       'Portrait photography',
@@ -73,6 +78,12 @@ const jsonLd = {
       'React',
       'Next.js',
     ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'talesofuj@gmail.com',
+      contactType: 'customer service',
+      availableLanguage: ['English'],
+    },
   },
 };
 
@@ -91,7 +102,7 @@ export default function Home() {
             size="lg"
             className="transition-all duration-300 text-lg"
           >
-            <Link href="/home">
+            <Link href="/">
               <ChevronLeft className="mr-2 size-6" />
               Home
             </Link>

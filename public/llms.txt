@@ -1,0 +1,39 @@
+# Tales of UJ
+
+> Theyyam & portrait photography by Ujual P S — storytelling through the lens.
+
+## About
+
+Tales of UJ is the photography and portfolio website of Ujual P S, a photographer and frontend engineer based in Kerala, India.
+
+Ujual P S specialises in Theyyam photography — capturing the divine energy, elaborate costumes, and ritual intensity of the Theyyam art form, a traditional folk art of northern Kerala. He also does portrait photography focused on authentic emotion and visual storytelling.
+
+Alongside photography, Ujual P S is a frontend engineer with expertise in React, Next.js, and modern web development. He is available for freelance work in both photography and software development.
+
+## Pages
+
+- [Home / Photography Portfolio](https://www.talesofuj.com) — Photography landing page showcasing Theyyam and portrait work
+- [Personal Portfolio & Contact](https://www.talesofuj.com/me) — Developer portfolio, photography projects, and contact information
+
+## Contact
+
+- Email: talesofuj@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ujualps
+- Instagram: https://www.instagram.com/talesofuj
+
+## Skills & Expertise
+
+**Photography:**
+- Theyyam photography (Kerala traditional folk art)
+- Portrait photography
+- Documentary and cultural photography
+- Visual storytelling
+
+**Software Engineering:**
+- Frontend engineering (React, Next.js, TypeScript)
+- Web application development
+- UI/UX implementation
+
+## About Theyyam
+
+Theyyam is a ritual art form native to the Malabar region of northern Kerala, India. Performers embody deities through elaborate makeup, costumes, and dance, often in nightlong ceremonies. Ujual P S documents Theyyam with a focus on preserving its cultural significance through photography.
